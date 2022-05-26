@@ -1,6 +1,6 @@
 let button = document.getElementById('request-device');
 button.addEventListener('click', async () => {
-    navigator.usb.requestDevice({ filters: [{vendorId: 12714, product_id: 12290}] })
+    navigator.usb.requestDevice({ filters: [] })
     .then( device => {
         console.log(device)
         console.log(device.productName);      // "Arduino Micro"
