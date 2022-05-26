@@ -1,11 +1,11 @@
 let button = document.getElementById('request-device');
 button.addEventListener('click', async () => {
     navigator.usb.requestDevice({ filters: [] })
-    .then( device => {
+    .then(async device => {
         console.log(device)
         console.log(device.productName);      // "Arduino Micro"
         console.log(device.manufacturerName); // "Arduino LLC"
-        device.open();
+        await device.open();
     })
     // .catch(error => { console.error(error); });
 
