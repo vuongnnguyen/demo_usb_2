@@ -10,7 +10,7 @@ button.addEventListener('click', async () => {
 
     const device = await navigator.usb.requestDevice({ filters: [{vendorId: 12714, product_id: 12290}] });
     console.log(device.configuration);
-
+    console.log("ddd")
   try {
     await device.open()
     await device.selectConfiguration(1) // configurationValue
