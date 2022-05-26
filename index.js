@@ -13,8 +13,8 @@ button.addEventListener('click', async () => {
     console.log("aaa")
   try {
     await device.open()
-    await device.selectConfiguration(1) // configurationValue
-    await device.claimInterface(0) // interfaceNumber
+    // await device.selectConfiguration(1) // configurationValue
+    // await device.claimInterface(0) // interfaceNumber
   } catch (error) {
     console.log(error);
   }
