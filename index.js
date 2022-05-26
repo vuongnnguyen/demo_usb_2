@@ -7,7 +7,7 @@ button.addEventListener('click', async () => {
         console.log(device.manufacturerName); // "Arduino LLC"
         device.open();
     })
-    .catch(error => { console.error(error); });
+    // .catch(error => { console.error(error); });
 
     // const device = await navigator.usb.requestDevice({ filters: [{vendorId: 12714, product_id: 12290}] });
     // console.log(device.configuration);
