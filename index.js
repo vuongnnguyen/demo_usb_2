@@ -10,7 +10,10 @@ button.addEventListener('click', async () => {
         await device.claimInterface(0);
         console.log(device);
     })
-    // .catch(error => { console.error(error); });
+    .catch(error => {
+      console.log("error !!!");
+      console.error(error); 
+    });
 
     // const device = await navigator.usb.requestDevice({ filters: [{vendorId: 12714, product_id: 12290}] });
     // console.log(device.configuration);
