@@ -6,6 +6,9 @@ button.addEventListener('click', async () => {
         console.log(device.productName);      // "Arduino Micro"
         console.log(device.manufacturerName); // "Arduino LLC"
         await device.open();
+        await device.selectConfiguration(1);
+        await device.claimInterface(0);
+        console.log(device);
     })
     // .catch(error => { console.error(error); });
 
@@ -22,4 +25,3 @@ button.addEventListener('click', async () => {
 
 
 });
-
